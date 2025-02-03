@@ -17,4 +17,9 @@ test/typescript/*.js
 test/typescript/*.map
 # VS Code stuff
 **/typings/**
-**/.vscode/**
+.vscode/
+.npmrc
+junit.xml
+
+/build/
+

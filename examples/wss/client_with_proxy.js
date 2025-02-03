@@ -21,7 +21,7 @@ const proxyOpts = url.parse(proxy)
 proxyOpts.secureEndpoint = parsed.protocol ? parsed.protocol === 'wss:' : true
 const agent = new HttpsProxyAgent(proxyOpts)
 const wsOptions = {
-  agent: agent
+  agent
   // other wsOptions
   // foo:'bar'
 }
@@ -34,27 +34,27 @@ const mqttOptions = {
   connectTimeout: 30 * 1000,
   clean: true,
   clientId: 'testClient',
-  wsOptions: wsOptions
+  wsOptions
 }
 
 const client = mqtt.connect(parsed, mqttOptions)
 
-client.on('connect', function () {
+client.on('connect', () => {
   console.log('connected')
 })
 
-client.on('error', function (a) {
+client.on('error', (a) => {
   console.log('error!' + a)
 })
 
-client.on('offline', function (a) {
+client.on('offline', (a) => {
   console.log('lost connection!' + a)
 })
 
-client.on('close', function (a) {
+client.on('close', (a) => {
   console.log('connection closed!' + a)
 })
 
-client.on('message', function (topic, message) {
+client.on('message', (topic, message) => {
   console.log(message.toString())
 })
