@@ -24,5 +24,6 @@ export {
 }
 export * from './lib/client'
 export * from './lib/shared'
+export * from './lib/validations'
 export { ReasonCodes } from './lib/handlers/ack'
 export type { Timer } from './lib/get-timer'
