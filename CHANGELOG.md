@@ -1,5 +1,12 @@
 # Changelog
 
+# [5.15.0](/compare/v5.14.1...v5.15.0) (2026-02-02)
+
+
+### Features
+
+* exported topic validation functions for external use (#2036) 396e02a, closes #2036
+
 ## [5.14.1](https://github.com/mqttjs/MQTT.js/compare/v5.14.0...v5.14.1) (2025-09-04)
 
 
